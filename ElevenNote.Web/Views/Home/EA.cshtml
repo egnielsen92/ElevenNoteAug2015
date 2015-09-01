@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "EA";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@{ var maxNumberOfDaysSinceLastExplosion = 365;
+    var showThis = true;}
+Number of Days Since Last Explosion:
+<select name="theOption">
+    @for (var i = 0; i <= maxNumberOfDaysSinceLastExplosion; i++)
+    {
+        <option value="@i">@i</option>
+    }
+</select>
+
+@if(showThis==true)
+{
+    <p>This. Is. AWESOME.</p>
+}
