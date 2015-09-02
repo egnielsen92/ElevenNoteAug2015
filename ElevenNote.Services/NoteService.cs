@@ -22,6 +22,7 @@ namespace ElevenNote.Services
                 note.Title = model.Title;
                 note.Contents = model.Contents;
                 note.DateCreated = DateTime.UtcNow;
+                note.DateModified = null;
                 note.ApplicationUserId = userId;
 
                 context.Notes.Add(note);

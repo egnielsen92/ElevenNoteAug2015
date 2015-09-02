@@ -8,30 +8,35 @@
     if (ViewBag.Win == 1)
     {
         <h2>Sorry, @Model.Name, the guess of @Model.Guess is <strong>SUPER</strong> close, but still wrong</h2>
+        <h2>@ViewBag.Temperature</h2>
         <h2>Guesses= @Session["Guess Count"]</h2>
     }
 
     else if (ViewBag.Win == 2)
     {
         <h2>Sorry, @Model.Name, the guess of @Model.Guess is wrong, but within 50</h2>
+        <h2>@ViewBag.Temperature</h2>
         <h2>Guesses= @Session["Guess Count"]</h2>
     }
 
     else if (ViewBag.Win == 3)
     {
         <h2>Sorry, @Model.Name, the guess of @Model.Guess is wrong, but within 100</h2>
+        <h2>@ViewBag.Temperature</h2>
         <h2>Guesses= @Session["Guess Count"]</h2>
     }
 
     else if (ViewBag.Win == 4)
     {
         <h2>Sorry, @Model.Name, the guess of @Model.Guess is wrong, but within 400</h2>
+        <h2>@ViewBag.Temperature</h2>
         <h2>Guesses= @Session["Guess Count"]</h2>
     }
 
     else if (ViewBag.Win == 5)
     {
         <h2>Sorry, @Model.Name, the guess of @Model.Guess is not even close</h2>
+        <h2>@ViewBag.Temperature</h2>
         <h2>Guesses= @Session["Guess Count"]</h2>
     }
     using (Html.BeginForm())

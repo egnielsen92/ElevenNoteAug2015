@@ -75,6 +75,14 @@
     <Compile Include="Migrations\201509020008574_DroppedTempTable.Designer.cs">
       <DependentUpon>201509020008574_DroppedTempTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509022048529_unexpectedmigrationuno.cs" />
+    <Compile Include="Migrations\201509022048529_unexpectedmigrationuno.Designer.cs">
+      <DependentUpon>201509022048529_unexpectedmigrationuno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509022203191_fixederraneouscolumn.cs" />
+    <Compile Include="Migrations\201509022203191_fixederraneouscolumn.Designer.cs">
+      <DependentUpon>201509022203191_fixederraneouscolumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509020008574_DroppedTempTable.resx">
       <DependentUpon>201509020008574_DroppedTempTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509022048529_unexpectedmigrationuno.resx">
+      <DependentUpon>201509022048529_unexpectedmigrationuno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509022203191_fixederraneouscolumn.resx">
+      <DependentUpon>201509022203191_fixederraneouscolumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

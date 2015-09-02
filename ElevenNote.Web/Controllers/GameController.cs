@@ -17,8 +17,10 @@ namespace ElevenNote.Web.Controllers
         {
             var correctAnswer = new Random().Next(1, 999);
             var guessCount = 0;
+            var lastGuess = 0;
             Session["Answer"] = correctAnswer;
             Session["Guess Count"] = guessCount;
+            Session["Last Guess"] = lastGuess;
             return View();
         }
         
@@ -42,7 +44,11 @@ namespace ElevenNote.Web.Controllers
 
                 else
                 {
+                    
                     var myVar = Math.Abs(model.Guess - (int)Session["Answer"]);
+                    var myOtherVar = Math.Abs(model.Guess - (int)Session["Last Guess"]);
+                    var myThirdVar = (int)Session["Last Guess"];
+                    
                     if (myVar <= 10)
                     {
                         ViewBag.Win = 1;
@@ -67,6 +73,27 @@ namespace ElevenNote.Web.Controllers
                     {
                         ViewBag.Win = 5;
                     }
+
+                    if (myThirdVar != 0)
+                    {
+                        if (myVar >= myOtherVar)
+                        {
+                            ViewBag.Temperature = "You are going the wrong way!";
+                        }
+
+                        else
+                        {
+                            ViewBag.Temperature = "Getting Warmer!";
+                        }
+                    }
+
+                    else
+                    {
+                        ViewBag.Temperature = "Not a bad first guess";
+                    }
+
+                    Session["Last Guess"] = model.Guess;
+                    
 
                 }
 
