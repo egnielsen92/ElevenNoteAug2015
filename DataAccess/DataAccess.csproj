@@ -59,6 +59,23 @@
   <ItemGroup>
     <Compile Include="ElevenNoteAplicationUser.cs" />
     <Compile Include="ElevenNoteDataContext.cs" />
+    <Compile Include="Migrations\201509012325251_AddedNotesTable.cs" />
+    <Compile Include="Migrations\201509012325251_AddedNotesTable.Designer.cs">
+      <DependentUpon>201509012325251_AddedNotesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509012356304_AddedATable.cs" />
+    <Compile Include="Migrations\201509012356304_AddedATable.Designer.cs">
+      <DependentUpon>201509012356304_AddedATable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509012359042_AddedATable2.cs" />
+    <Compile Include="Migrations\201509012359042_AddedATable2.Designer.cs">
+      <DependentUpon>201509012359042_AddedATable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509020008574_DroppedTempTable.cs" />
+    <Compile Include="Migrations\201509020008574_DroppedTempTable.Designer.cs">
+      <DependentUpon>201509020008574_DroppedTempTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +87,20 @@
       <Project>{837b6b83-247f-4c2a-aa22-ac7fbaed4d38}</Project>
       <Name>ElevenNote.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509012325251_AddedNotesTable.resx">
+      <DependentUpon>201509012325251_AddedNotesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509012356304_AddedATable.resx">
+      <DependentUpon>201509012356304_AddedATable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509012359042_AddedATable2.resx">
+      <DependentUpon>201509012359042_AddedATable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509020008574_DroppedTempTable.resx">
+      <DependentUpon>201509020008574_DroppedTempTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
