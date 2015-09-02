@@ -28,5 +28,6 @@ namespace ElevenNote.Models
 
         [DefaultValue(false)]
         public bool IsFavorite { get; set; }
+        public DateTime DataCreated { get; set; }
     }
 }

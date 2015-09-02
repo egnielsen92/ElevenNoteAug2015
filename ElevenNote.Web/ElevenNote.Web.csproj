@@ -171,6 +171,7 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NotesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -244,6 +245,7 @@
     <Content Include="Views\Home\EA.cshtml" />
     <Content Include="Views\Home\Nielsen.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Notes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -260,6 +262,12 @@
     <EmbeddedResource Include="Migrations\201508311752414_InitialCreate.resx">
       <DependentUpon>201508311752414_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElevenNote.Models\ElevenNote.Models.csproj">
+      <Project>{837b6b83-247f-4c2a-aa22-ac7fbaed4d38}</Project>
+      <Name>ElevenNote.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
