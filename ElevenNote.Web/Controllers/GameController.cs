@@ -48,30 +48,40 @@ namespace ElevenNote.Web.Controllers
                     var myVar = Math.Abs(model.Guess - (int)Session["Answer"]);
                     var myOtherVar = Math.Abs(model.Guess - (int)Session["Last Guess"]);
                     var myThirdVar = (int)Session["Last Guess"];
-                    
+
                     if (myVar <= 10)
                     {
                         ViewBag.Win = 1;
                     }
 
-                    else if (myVar <= 50)
+                    else if (myVar <= 25)
                     {
                         ViewBag.Win = 2;
                     }
 
-                    else if (myVar <= 100)
+                    else if (myVar <= 50)
                     {
                         ViewBag.Win = 3;
                     }
 
-                    else if (myVar <= 400)
+                    else if (myVar <= 100)
                     {
                         ViewBag.Win = 4;
                     }
 
-                    else
+                    else if (myVar <= 250)
                     {
                         ViewBag.Win = 5;
+                    }
+
+                    else if (myVar <= 500)
+                    {
+                        ViewBag.Win = 6;
+                    }
+
+                    else
+                    {
+                        ViewBag.Win = 7;
                     }
 
                     if (myThirdVar != 0)
